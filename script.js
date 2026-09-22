@@ -1,8 +1,12 @@
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 
-button.addEventListener("click", function() {
-    const name = input.value;
+button.addEventListener("click", function () {
+    const name = input.value.trim().toLowerCase();
 
-    alert("Oh... so your name is " + name + "?");
+    if (name === "davis") {
+        window.location.href = "welcome.html";
+    } else {
+        window.location.href = "wrong.html";
+    }
 });
